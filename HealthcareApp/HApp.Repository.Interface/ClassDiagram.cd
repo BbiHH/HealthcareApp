@@ -10,7 +10,7 @@
   <Interface Name="HApp.Repository.Interface.IDoctorRepository">
     <Position X="1.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>IRepositoryDoctor.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -24,7 +24,7 @@
   <Interface Name="HApp.Repository.Interface.IEMRRepository">
     <Position X="6" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IEMRRepository.cs</FileName>
     </TypeIdentifier>
   </Interface>

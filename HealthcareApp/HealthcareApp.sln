@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HApp.Domain", "HApp.Domain\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HApp.Repository.Interface", "HApp.Repository.Interface\HApp.Repository.Interface.csproj", "{99C76E0D-8600-4505-8BB5-E9E0530FCF68}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HApp.Repository.EF", "HApp.Repository\HApp.Repository.EF.csproj", "{B314615B-7088-4C2B-94D2-FE6752E4DDC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{99C76E0D-8600-4505-8BB5-E9E0530FCF68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99C76E0D-8600-4505-8BB5-E9E0530FCF68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99C76E0D-8600-4505-8BB5-E9E0530FCF68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B314615B-7088-4C2B-94D2-FE6752E4DDC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B314615B-7088-4C2B-94D2-FE6752E4DDC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B314615B-7088-4C2B-94D2-FE6752E4DDC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B314615B-7088-4C2B-94D2-FE6752E4DDC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

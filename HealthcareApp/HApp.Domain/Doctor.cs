@@ -11,10 +11,6 @@ namespace HApp.Domain
         {
             Name = name;
         }
-        /// <summary>
-        /// 标识签名
-        /// </summary>
-        private string updateKey;
 
         /// <summary>
         /// 会话密钥集合

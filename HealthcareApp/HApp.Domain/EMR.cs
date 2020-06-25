@@ -9,17 +9,9 @@ namespace HApp.Domain
     {
 
         /// <summary>
-        /// 最新更新时间
-        /// </summary>
-        public DateTime UpdateTime
-        {
-            get; set;
-        }
-
-        /// <summary>
         /// 病例描述
         /// </summary>
-        public string Text
+        public string Ehistory
         {
             get; set;
         }
@@ -32,12 +24,6 @@ namespace HApp.Domain
             get; set;
         }
 
-        /// <summary>
-        /// 更新签名
-        /// </summary>
-        public string UpdateKey
-        {
-            get; set;
-        }
+        public virtual ICollection<Patient> Patient { get; set; }
     }
 }
