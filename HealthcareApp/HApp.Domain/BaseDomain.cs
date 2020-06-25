@@ -12,7 +12,7 @@ namespace HApp.Domain
         /// </summary>
         private string privateKey;
 
-        public BaseDomain()
+        public BaseDomain():
         {
             CreatKey();
         }

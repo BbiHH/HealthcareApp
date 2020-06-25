@@ -44,7 +44,7 @@
     <Compile Include="IEMRRepository.cs" />
     <Compile Include="IPaientRepository.cs" />
     <Compile Include="IRepository.cs" />
-    <Compile Include="IRepositoryDoctor.cs" />
+    <Compile Include="IDoctorRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

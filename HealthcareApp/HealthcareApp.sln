@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HApp.Domain", "HApp.Domain\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HApp.Repository.Interface", "HApp.Repository.Interface\HApp.Repository.Interface.csproj", "{99C76E0D-8600-4505-8BB5-E9E0530FCF68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HApp.Repository.EF", "HApp.Repository\HApp.Repository.EF.csproj", "{B314615B-7088-4C2B-94D2-FE6752E4DDC4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HApp.Repository", "HApp.Repository\HApp.Repository.csproj", "{B314615B-7088-4C2B-94D2-FE6752E4DDC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

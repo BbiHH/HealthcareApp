@@ -11,12 +11,16 @@ namespace HApp.Domain
         {
             ID = Guid.NewGuid();
         }
+
         /// <summary>
         /// ID
         /// </summary>
         public Guid ID
         {
-            get;set;
+            get => default;
+            set
+            {
+            }
         }
     }
 }

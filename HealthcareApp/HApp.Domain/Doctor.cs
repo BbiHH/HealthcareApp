@@ -1,50 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 namespace HApp.Domain
 {
-    public class Doctor : BaseDomain
+    using System;
+    using System.Collections.Generic;
+
+
+    public partial class Doctor : BaseDomain
     {
-        public Doctor(string name):base()
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Doctor():base()
         {
-            Name = name;
+            ID = Guid.NewGuid();
+            Session = new HashSet<Session>();
         }
 
-        /// <summary>
-        /// 会话密钥集合
-        /// </summary>
-        public List<string> SessionKeyList
-        {
-            get; set;
-        }
+        public Guid DID { get; set; }
 
-        /// <summary>
-        /// EMR集合
-        /// </summary>
-        public List<EMR> EMRList
-        {
-            get;set;
-        }
+        public string Dname { get; set; }
 
-        /// <summary>
-        /// 解开EMR
-        /// </summary>
-        /// <param name="SessionKey">会话密钥</param>
-        public EMR UnLockEMR(string SessionKey)
-        {
-            //通过会话密钥找到EMR 并返回EMR
-            throw new System.NotImplementedException();
-        }
+        public string Dprikey { get; set; }
 
-        /// <summary>
-        /// 更新EMR
-        /// </summary>
-        public void UpdateEMR(EMR emr, string updatekey)
-        {
-            //更新后的EMR要再使用更新密钥签名，并且修改更新时间
-            throw new System.NotImplementedException();
-        }
+
+        public string Dpubkey { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Session> Session { get; set; }
     }
 }

@@ -1,29 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 namespace HApp.Domain
 {
-    public class EMR : BaseClass
+    using System;
+    using System.Collections.Generic;
+
+    public partial class EMR : BaseClass
     {
-
-        /// <summary>
-        /// 病例描述
-        /// </summary>
-        public string Ehistory
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public EMR():base()
         {
-            get; set;
+            Patient = new HashSet<Patient>();
         }
 
-        /// <summary>
-        /// 加密EMR的密钥
-        /// </summary>
-        public string SessionKey
-        {
-            get; set;
-        }
+        public Guid EMRID { get; set; }
 
+        public string Ehistory { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Patient> Patient { get; set; }
     }
 }
