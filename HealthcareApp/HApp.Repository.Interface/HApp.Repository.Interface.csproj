@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B84A386E-8403-4BDB-B298-921B089D99BD}</ProjectGuid>
+    <ProjectGuid>{99C76E0D-8600-4505-8BB5-E9E0530FCF68}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HApp.Domain</RootNamespace>
-    <AssemblyName>HApp.Domain</AssemblyName>
+    <RootNamespace>HApp.Repository.Interface</RootNamespace>
+    <AssemblyName>HApp.Repository.Interface</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,15 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseClass.cs" />
-    <Compile Include="BaseDomain.cs" />
-    <Compile Include="Doctor.cs" />
-    <Compile Include="EMR.cs" />
-    <Compile Include="Patient.cs" />
+    <Compile Include="IEMRRepository.cs" />
+    <Compile Include="IPaientRepository.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="IRepositoryDoctor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HApp.Domain\HApp.Domain.csproj">
+      <Project>{B84A386E-8403-4BDB-B298-921B089D99BD}</Project>
+      <Name>HApp.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

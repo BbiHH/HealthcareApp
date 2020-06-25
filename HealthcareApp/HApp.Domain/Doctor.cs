@@ -7,6 +7,10 @@ namespace HApp.Domain
 {
     public class Doctor : BaseDomain
     {
+        public Doctor(string name):base()
+        {
+            Name = name;
+        }
         /// <summary>
         /// 标识签名
         /// </summary>
@@ -18,6 +22,14 @@ namespace HApp.Domain
         public List<string> SessionKeyList
         {
             get; set;
+        }
+
+        /// <summary>
+        /// EMR集合
+        /// </summary>
+        public List<EMR> EMRList
+        {
+            get;set;
         }
 
         /// <summary>

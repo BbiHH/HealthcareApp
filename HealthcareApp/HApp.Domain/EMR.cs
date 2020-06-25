@@ -5,15 +5,8 @@ using System.Text;
 
 namespace HApp.Domain
 {
-    public class EMR
+    public class EMR : BaseClass
     {
-        /// <summary>
-        /// EMRid
-        /// </summary>
-        public Guid Id
-        {
-            get;set;
-        }
 
         /// <summary>
         /// 最新更新时间

@@ -1,31 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="HApp.Domain.BaseDomain">
-    <Position X="3.5" Y="0.5" Width="1.5" />
+    <Position X="4.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAADAAAAAAAQAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAABAAAAAAAQAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BaseDomain.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HApp.Domain.Patient">
-    <Position X="1.25" Y="3.5" Width="1.5" />
+    <Position X="3.25" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAQAAEAAAAAAAAEAAAAAAAAACQAAAA=</HashCode>
       <FileName>Patient.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HApp.Domain.Doctor">
-    <Position X="5.75" Y="3.75" Width="1.5" />
+    <Position X="6" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAACAAAAAAAAEAAAAAAAQAAAAAAAAAAAAAAACA=</HashCode>
+      <HashCode>AAAAAAAACAAAAAAAAEAAAAAAAQAAAAAACAAAAAAAACA=</HashCode>
       <FileName>Doctor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HApp.Domain.EMR">
-    <Position X="3.5" Y="3.75" Width="1.5" />
+    <Position X="0.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAQAQAAAAAAAAAAAAAAAAAEAACAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAEAACAAAAAA=</HashCode>
       <FileName>EMR.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HApp.Domain.BaseClass">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseClass.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />

@@ -7,6 +7,11 @@ namespace HApp.Domain
 {
     public class Patient : BaseDomain
     {
+        public Patient(string name):base()
+        {
+            Name = name;
+        }
+
         public EMR EMR
         {
             get; set;
