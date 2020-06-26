@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HApp.Repository
 {
-    class CodeRepository :ICodeRepository
+    public class CodeRepository :ICodeRepository
     {
         protected readonly HappContext _context;  //映射过来的数据
         protected DbSet<Code> _DbSet

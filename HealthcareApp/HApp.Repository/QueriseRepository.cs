@@ -8,7 +8,7 @@ using HApp.Domain;
 using HApp.Repository.Interface;
 namespace HApp.Repository
 {
-    class QueriseRepository : IQueriseRepository
+    public class QueriseRepository : IQueriseRepository
     {
         protected readonly HappContext _context;  //映射过来的数据
         protected DbSet<Querise> _DbSet
@@ -30,8 +30,6 @@ namespace HApp.Repository
         {
             _DbSet.Add(entity);
         }
-
-
 
         public void Modify(Querise entity)
         {

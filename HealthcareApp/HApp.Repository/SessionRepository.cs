@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HApp.Repository
 {
-    class SessionRepository: ISessionRepository
+    public class SessionRepository: ISessionRepository
     {
         protected readonly HappContext _context;  //映射过来的数据
         protected DbSet<Session> _DbSet

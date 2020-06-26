@@ -8,8 +8,8 @@ namespace HApp.Domain
 {
     public class Code
     {
-        string Cprikey { get; set; }
-        string Cpubkey { get; set; }
-        string SessionKey { get; set; }
+        public string Cprikey { get; set; }
+        public string Cpubkey { get; set; }
+        public string SessionKey { get; set; }
     }
 }
