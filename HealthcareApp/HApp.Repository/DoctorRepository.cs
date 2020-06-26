@@ -12,10 +12,5 @@ namespace HApp.Repository
         public DoctorRepository(HappContext context) : base(context)
         {
         }
-
-        public List<EMR> FindAllEMR()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

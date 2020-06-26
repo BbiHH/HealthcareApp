@@ -41,10 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICodeRepository.cs" />
     <Compile Include="IEMRRepository.cs" />
     <Compile Include="IPaientRepository.cs" />
+    <Compile Include="IQueriseRepository.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="IDoctorRepository.cs" />
+    <Compile Include="ISessionRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

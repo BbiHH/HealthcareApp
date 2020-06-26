@@ -17,10 +17,7 @@ namespace HApp.Domain
         /// </summary>
         public Guid ID
         {
-            get => default;
-            set
-            {
-            }
+            get;set;
         }
     }
 }

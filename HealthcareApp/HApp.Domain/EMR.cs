@@ -11,9 +11,10 @@ namespace HApp.Domain
             Patient = new HashSet<Patient>();
         }
 
-        public Guid EMRID { get; set; }
 
         public string Ehistory { get; set; }
+
+        public string Ppubkey { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Patient> Patient { get; set; }

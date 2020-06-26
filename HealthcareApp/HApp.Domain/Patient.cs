@@ -13,18 +13,6 @@ namespace HApp.Domain
         }
 
 
-        public Guid PID { get; set; }
-
-
-        public string Pname { get; set; }
-
-
-        public string Pprikey { get; set; }
-
-
-        public string Ppubkey { get; set; }
-
-
         public string SessionKey { get; set; }
 
         public Guid? EID { get; set; }

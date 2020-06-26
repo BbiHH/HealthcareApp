@@ -8,9 +8,6 @@ namespace HApp.Repository.Interface
 {
     public interface IEMRRepository : IRepository<EMR>
     {
-        /// <summary>
-        /// 通过会话密钥找到EMR
-        /// </summary>
-        EMR FindBySessionKey();
+        EMR FindByPatientPubKey(string PublicKey);
     }
 }

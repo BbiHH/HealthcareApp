@@ -11,7 +11,7 @@
   <Class Name="HApp.Repository.DoctorRepository">
     <Position X="1" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DoctorRepository.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -19,9 +19,10 @@
   <Class Name="HApp.Repository.EMRRepository">
     <Position X="3.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EMRRepository.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />
 </ClassDiagram>
