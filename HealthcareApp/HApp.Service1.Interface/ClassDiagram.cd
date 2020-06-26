@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="HApp.Service.Interface.IPatientService">
+    <Position X="3" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAEAAAAAAAQACQAAAg=</HashCode>
+      <FileName>IPatientService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="HApp.Service.Interface.ICAService">
+    <Position X="1.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAECAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ICAService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="HApp.Service.Interface.IDoctorService">
+    <Position X="4.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIACAAAAAAAAAAAAAAYAAAAAAA=</HashCode>
+      <FileName>IDoctorService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="HApp.Service.Interface.ICodeService">
+    <Position X="6.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEACAAAAA=</HashCode>
+      <FileName>ICodeService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

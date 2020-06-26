@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HApp.Repository", "HApp.Rep
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HApp.Repository.Test", "HApp.Repository.Test\HApp.Repository.Test.csproj", "{98C4E54F-0C83-4B9D-8B9A-355091DB2369}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HApp.Service", "HApp.Service\HApp.Service.csproj", "{FFBE6DBF-B065-43E0-AFCB-6CA35A152411}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HApp.Service.Interface", "HApp.Service.Interface\HApp.Service.Interface.csproj", "{521A0C23-3855-47B0-953C-03D92A5BFF22}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{98C4E54F-0C83-4B9D-8B9A-355091DB2369}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98C4E54F-0C83-4B9D-8B9A-355091DB2369}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98C4E54F-0C83-4B9D-8B9A-355091DB2369}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFBE6DBF-B065-43E0-AFCB-6CA35A152411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFBE6DBF-B065-43E0-AFCB-6CA35A152411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFBE6DBF-B065-43E0-AFCB-6CA35A152411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFBE6DBF-B065-43E0-AFCB-6CA35A152411}.Release|Any CPU.Build.0 = Release|Any CPU
+		{521A0C23-3855-47B0-953C-03D92A5BFF22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{521A0C23-3855-47B0-953C-03D92A5BFF22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{521A0C23-3855-47B0-953C-03D92A5BFF22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{521A0C23-3855-47B0-953C-03D92A5BFF22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
