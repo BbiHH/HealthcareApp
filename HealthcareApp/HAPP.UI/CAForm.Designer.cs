@@ -36,13 +36,12 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,6 +125,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "请保管好密钥信息";
             // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(169, 103);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(153, 25);
+            this.textBox5.TabIndex = 16;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(46, 106);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 15);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "编号";
+            // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(169, 64);
@@ -160,38 +176,11 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "生成公钥";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 15);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "label6";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(46, 106);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 15);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "编号";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(169, 103);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(153, 25);
-            this.textBox5.TabIndex = 16;
-            // 
             // CAForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(397, 407);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
@@ -201,7 +190,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "CAForm";
-            this.Text = "CAForm";
+            this.Text = "注册窗口";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -225,6 +214,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
     }
 }

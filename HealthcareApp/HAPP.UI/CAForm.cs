@@ -54,7 +54,7 @@ namespace HAPP.UI
                 textBox4.Text = people.privateKey;
                 textBox5.Text = people.ID.ToString();
             }
-
+            Service.dbcontext.SaveChanges();
             MessageBox.Show("注册成功!");
 
         }

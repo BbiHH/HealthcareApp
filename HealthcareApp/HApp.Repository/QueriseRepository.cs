@@ -45,8 +45,7 @@ namespace HApp.Repository
 
         public IList<Querise> FindByDoctorID(Guid ID)
         {
-            var result =  _DbSet.Where(t => t.DID == ID).ToList();
-            return result;
+            return null;
         }
     }
 }

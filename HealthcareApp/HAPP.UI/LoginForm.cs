@@ -24,7 +24,7 @@ namespace HApp.UI
         private void denglu1_Click(object sender, EventArgs e)
         {
 
-            PatientForm patientForm = new PatientForm(Service);
+            PatientLoginForm patientForm = new PatientLoginForm(Service);
             patientForm.Show();
         }
 

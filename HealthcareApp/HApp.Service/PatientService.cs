@@ -28,7 +28,13 @@ namespace HApp.Service
 
         public string CreatSessionKey(Patient patient)
         {
-            throw new NotImplementedException();
+            string SessionKey = "S@" + patient.PublicKey;
+            patient.SessionKey = SessionKey;
+            Code code = new Code() { Cprikey = patient.privateKey, Cpubkey = patient.PublicKey, SessionKey = patient.SessionKey };
+            codeRepository.Add(code);
+            patientRepository.Modify(patient);
+
+            return SessionKey;
         }
 
         public EMR FindEMR(string patient)

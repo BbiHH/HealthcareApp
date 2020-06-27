@@ -33,7 +33,8 @@ namespace HAPP.UI
                 Name = textBox1.Text,
                 PublicKey = textBox2.Text
             });
-
+            MessageBox.Show("添加成功");
+            Service.dbcontext.SaveChanges();
         }
     }
 }

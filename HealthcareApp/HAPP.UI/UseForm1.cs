@@ -35,6 +35,7 @@ namespace HAPP.UI
             MessageBox.Show("创建成功");
             richTextBox1.Text = richTextBox1.Text + "\r\n" + DateTime.Now.ToString()
                 + "创建病例 ID:" + emr.ID;
+            Service.dbcontext.SaveChanges();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -42,6 +43,7 @@ namespace HAPP.UI
             EMR emr = Service.PatientService.FindEMR(patient.PublicKey);
             ShowEMR showEMR = new ShowEMR(emr,Service);
             showEMR.Show();
+            Service.dbcontext.SaveChanges();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -50,6 +52,7 @@ namespace HAPP.UI
             MessageBox.Show("创建成功");
             richTextBox1.Text = richTextBox1.Text + "\r\n" + DateTime.Now.ToString()
             + "创建会话密钥 :" + SessionKey;
+            Service.dbcontext.SaveChanges();
 
         }
 

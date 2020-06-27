@@ -10,12 +10,17 @@ namespace HApp.Service
 {
     public class ServiceUse
     {
-        readonly HappContext dbcontext;
+        public HappContext dbcontext
+        {
+            get;
+            set;
+        }
 
         public ServiceUse(HappContext dbcontext)
         {
             this.dbcontext = dbcontext;
         }
+
 
         public ICAService CAService
         {

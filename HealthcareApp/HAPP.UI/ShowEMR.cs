@@ -1,4 +1,6 @@
 ﻿using HApp.Domain;
+using HApp.Repository;
+using HApp.Repository.Interface;
 using HApp.Service;
 using System;
 using System.Collections.Generic;
@@ -33,6 +35,15 @@ namespace HAPP.UI
         {
             AddText addText = new AddText(emr, Service);
             addText.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EMR emr = Service.DoctorService.FindEMRbyID(new Guid(textBox1.Text));
+            IEMRRepository eMRRepository = new EMRRepository(Service.dbcontext);
+            eMRRepository.Remove(emr);
+            Service.dbcontext.SaveChanges();
+            MessageBox.Show("删除成功");
         }
     }
 }

@@ -14,9 +14,8 @@ namespace HApp.Repository
         }
         public EMR FindByPatientPubKey(string PublicKey)
         {
-            var enm = _DbSet.Where(t => t.Ppubkey == PublicKey).ToList();
-            EMR emr = enm[0];
-            return emr;
+            var enm = _DbSet.ToList();
+            return enm.Find(t => t.Ppubkey == PublicKey);
         }
     }
 }

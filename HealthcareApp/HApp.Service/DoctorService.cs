@@ -26,8 +26,8 @@ namespace HApp.Service
 
         public void ModifyEMR(EMR emr, string text, Doctor dr)
         {
-            emr.Ehistory = emr.Ehistory + "\r\n\r\n" +"时间：" +DateTime.Now.ToString() +"具体"+text;
-            emr.Ehistory = emr.Ehistory + "\r\n\t\t" + "主任医师:" + dr.Name + "\t签名:" + dr.PublicKey;
+            emr.Ehistory = emr.Ehistory + "\r\n\r\n" +"时间：" +DateTime.Now.ToString() +"\r\n具体:\r\n\t"+text;
+            emr.Ehistory = emr.Ehistory + "\r\n\t\t\t" + "主任医师:" + dr.Name + "\t签名:" + dr.PublicKey;
             emrRepository.Modify(emr);
         }
 
@@ -52,7 +52,6 @@ namespace HApp.Service
 
             if (l)
             {
-                queriseRepository.Add(new Querise() { EID = emr.ID,DID=doctor.ID,SessionKey=sessionkey});
                 return emr;
             }
             else
