@@ -1,16 +1,14 @@
 ﻿using HApp.Domain;
+using HApp.Repository;
 using HApp.Repository.Interface;
 using HApp.Service.Interface;
 
 namespace HApp.Service
 {
-    class CodeService : ICodeService
+    public class CodeService : BaseService, ICodeService
     {
-        ICodeRepository codeRepository;
-
-        public CodeService(ICodeRepository codeRepository)
+        public CodeService(HappContext context):base(context)
         {
-            this.codeRepository = codeRepository;
         }
 
         public bool LockEMR(EMR emr, string session)

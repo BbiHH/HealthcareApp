@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HApp.Service.Interface", "H
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HApp.Domaindo", "HApp.Domaindo\HApp.Domaindo.csproj", "{092A1F73-0DD7-4324-92A3-5FEF520AA0B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HAPP.UI", "HAPP.UI\HAPP.UI.csproj", "{C730A2C5-7204-4C0B-9FBA-07E663D51354}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{092A1F73-0DD7-4324-92A3-5FEF520AA0B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{092A1F73-0DD7-4324-92A3-5FEF520AA0B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{092A1F73-0DD7-4324-92A3-5FEF520AA0B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C730A2C5-7204-4C0B-9FBA-07E663D51354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C730A2C5-7204-4C0B-9FBA-07E663D51354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C730A2C5-7204-4C0B-9FBA-07E663D51354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C730A2C5-7204-4C0B-9FBA-07E663D51354}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

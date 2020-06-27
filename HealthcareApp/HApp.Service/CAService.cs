@@ -4,22 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HApp.Domain;
+using HApp.Repository;
 using HApp.Repository.Interface;
 using HApp.Service.Interface;
 
 namespace HApp.Service
 {
-    public class CAService : ICAService
+    public class CAService :BaseService, ICAService
     {
-        IDoctorRepository doctorRepository;
-        IPaientRepository paientRepository;
-
-        public CAService(IDoctorRepository doctorRepository, IPaientRepository paientRepository)
+        public CAService(HappContext context):base(context)
         {
-            this.doctorRepository = doctorRepository;
-            this.paientRepository = paientRepository;
         }
-
         public void AddDoctor(Doctor doctor)
         {
             Doctor dr = doctor;
@@ -29,7 +24,19 @@ namespace HApp.Service
         public void AddPatient(Patient patient)
         {
             Patient pt = patient;
-            paientRepository.Add(pt);
+            patientRepository.Add(pt);
+        }
+
+        public Doctor FindDoctor(Doctor doctor)
+        {
+            Doctor dr = doctorRepository.FindById(doctor.ID);
+            return dr;
+        }
+
+        public Patient FindPatient(Patient patient)
+        {
+            Patient pt =  patientRepository.FindById(patient.ID);
+            return pt;
         }
     }
 }

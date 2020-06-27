@@ -5,16 +5,25 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using HApp.Domain;
+using HApp.Repository;
 using HApp.Repository.Interface;
 using HApp.Service.Interface;
 namespace HApp.Service
 {
-    class DoctorService : IDoctorService
+    public class DoctorService :BaseService, IDoctorService
     {
-        IEMRRepository emrRepository;
-        ICodeRepository codeRepository;
-        IQueriseRepository queriseRepository;
-        ISessionRepository sessionRepository;
+        HappContext context;
+        public DoctorService(HappContext context):base(context)
+        {
+            this.context = context;
+        }
+
+        public EMR FindEMRbyID(Guid guid)
+        {
+            EMR emr = emrRepository.FindById(guid);
+            return emr;
+        }
+
         public void ModifyEMR(EMR emr, string text, Doctor dr)
         {
             emr.Ehistory = emr.Ehistory + "\r\n\r\n" +"时间：" +DateTime.Now.ToString() +"具体"+text;
@@ -34,15 +43,16 @@ namespace HApp.Service
             return s;
         }
 
-        public EMR unLockEMR(string publickey, string sessionkey)
+        public EMR unLockEMR(string publickey, string sessionkey , Doctor doctor)
         {
             EMR emr = emrRepository.FindByPatientPubKey(publickey);
-            CodeService codeService = new CodeService(codeRepository);
+            CodeService codeService = new CodeService(context);
             
             bool l =  codeService.LockEMR(emr, sessionkey);
 
             if (l)
             {
+                queriseRepository.Add(new Querise() { EID = emr.ID,DID=doctor.ID,SessionKey=sessionkey});
                 return emr;
             }
             else

@@ -21,7 +21,7 @@ namespace HApp.Service.Interface
         /// <summary>
         /// 生成EMR
         /// </summary>
-        void CreatEMR(Patient patient);
+        EMR CreatEMR(Patient patient);
         IList<Session> ShowSession(Patient patient);
     }
 }

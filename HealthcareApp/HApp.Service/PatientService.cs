@@ -4,22 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HApp.Domain;
+using HApp.Repository;
 using HApp.Repository.Interface;
 using HApp.Service.Interface;
 namespace HApp.Service
 {
-    class PatientService : IPatientService
+    public class PatientService :BaseService, IPatientService
     {
-        IEMRRepository eMRRepository;
-        ICodeRepository codeRepository;
-        ISessionRepository sessionRepository;
+        public PatientService(HappContext context) : base(context)
+        {
 
-        public void CreatEMR(Patient patient)
+        }
+
+        public EMR CreatEMR(Patient patient)
         {
             EMR emr = new EMR();
             emr.Ppubkey = patient.PublicKey;
-            emr.Ehistory = DateTime.Now.ToString() + "病例创建";
-            eMRRepository.Add(emr);
+            emr.Ehistory = "姓名:" + patient.Name;
+            emr.Ehistory = emr.Ehistory + "\r\n"+DateTime.Now.ToString() + "病例创建";
+            emrRepository.Add(emr);
+            return emr;
         }
 
         public string CreatSessionKey(Patient patient)
@@ -29,7 +33,7 @@ namespace HApp.Service
 
         public EMR FindEMR(string patient)
         {
-            EMR emr = eMRRepository.FindByPatientPubKey(patient);
+            EMR emr = emrRepository.FindByPatientPubKey(patient);
             return emr;
         }
 

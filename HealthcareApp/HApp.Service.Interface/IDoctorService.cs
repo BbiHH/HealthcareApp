@@ -11,7 +11,9 @@ namespace HApp.Service.Interface
         /// <param name="emr">病例</param>
         /// <param name="text">添加信息</param>
         void ModifyEMR(EMR emr, string text,Doctor dr);
-        EMR unLockEMR(string publickey,string sessionkey);
+        EMR unLockEMR(string publickey,string sessionkey,Doctor doctor);
+
+        EMR FindEMRbyID(Guid guid);
         IList<Querise> ShowEMR(Doctor dr);
         IList<Session> ShowSession(Doctor doctor);
     }

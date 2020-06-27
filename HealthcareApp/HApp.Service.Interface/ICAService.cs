@@ -10,5 +10,8 @@ namespace HApp.Service.Interface
     {
         void AddPatient(Patient patient);
         void AddDoctor(Doctor doctor);
+
+        Patient FindPatient(Patient patient);
+        Doctor FindDoctor(Doctor doctor);
     }
 }
