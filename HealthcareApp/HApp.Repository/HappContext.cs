@@ -9,7 +9,7 @@ namespace HApp.Repository
     public partial class HappContext : DbContext
     {
         public HappContext()
-            : base("name=HAppDb")
+            : base(@"Data Source=DESKTOP-TKGEU0K\BBIHH;Initial Catalog=HAppDb;Integrated Security=True")
         {
         }
 
@@ -17,7 +17,11 @@ namespace HApp.Repository
         {
 
             modelBuilder.Entity<Code>().ToTable("Code");
+
             modelBuilder.Entity<Session>().ToTable("Session");
+            modelBuilder.Entity<Session>().Property(t => t.DID).HasColumnName("DID");
+            modelBuilder.Entity<Session>().Property(t => t.PID).HasColumnName("PID");
+            modelBuilder.Entity<Session>().Property(t => t.Date).HasColumnName("Date");
             //医生表的映射
             modelBuilder.Entity<Doctor>().ToTable("Doctor");
             modelBuilder.Entity<Doctor>().Property(t => t.ID).HasColumnName("DID");
@@ -47,9 +51,6 @@ namespace HApp.Repository
             modelBuilder.Entity<Querise>().Property(t => t.SessionKey).HasColumnName("SessionKey");
 
             //医生一对多个查询
-            modelBuilder.Entity<Doctor>()
-                .HasMany(t => t.Querises)
-                .WithRequired();
 
             modelBuilder.Entity<EMR>()
                 .Property(e => e.Ehistory)

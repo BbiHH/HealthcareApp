@@ -42,9 +42,9 @@ namespace HApp.Repository.Test
         public void AddTest()
         {
             repository.Add(doctor);
+
             bool result = dbContext.SaveChanges() > 0;
             Assert.IsTrue(result);
-            Transaction.Current.Rollback();
         }
 
         [TestMethod]
@@ -53,7 +53,6 @@ namespace HApp.Repository.Test
             repository.Add(doctor);
             Doctor result = repository.FindById(Id);
             Assert.IsTrue(result.ID == Id);
-            Transaction.Current.Rollback();
         }
 
         [TestMethod]
@@ -64,7 +63,6 @@ namespace HApp.Repository.Test
             repository.Modify(doctorForModify);
             Doctor result = repository.FindById(Id);
             Assert.IsTrue(result.PublicKey== "P@987654321" && result.privateKey== "P@87654321" && result.Name=="xxxxx");
-            Transaction.Current.Rollback();
         }
 
         [TestMethod]
@@ -75,7 +73,6 @@ namespace HApp.Repository.Test
             repository.Remove(doctor);
             result = dbContext.SaveChanges() > 0;
             Assert.IsTrue(result);
-            Transaction.Current.Rollback();
         }
     }
 }

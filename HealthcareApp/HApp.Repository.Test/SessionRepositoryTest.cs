@@ -12,7 +12,9 @@ namespace HApp.Repository.Test
     {
         private TransactionScope transactionScope;
         private HappContext dbContext;
-        private SessionRepository repository;
+        private SessionRepository sessionrepository;
+        private DoctorRepository doctorRepository;
+        private PatientRepository patientRepository;
         private Session session;
         private Doctor doctor;
         private Patient patient;
@@ -22,15 +24,15 @@ namespace HApp.Repository.Test
         {
             transactionScope = new TransactionScope();
             dbContext = new HappContext();
-            repository = new SessionRepository(dbContext);
-            doctor = new Doctor() {ID = Guid.NewGuid() };
-            patient = new Patient() {ID = Guid.NewGuid() };
+            sessionrepository = new SessionRepository(dbContext);
+            doctorRepository = new DoctorRepository(dbContext);
+            patientRepository = new PatientRepository(dbContext);
+            doctor = new Doctor();
+            patient = new Patient();
             session = new Session() {
                 PID = patient.ID,
                 DID = doctor.ID,
                 Date = DateTime.Now,
-                Doctor = doctor,
-                Patient = patient
             };
         }
 
@@ -46,8 +48,10 @@ namespace HApp.Repository.Test
         [TestMethod]
         public void AddTest()
         {
-            repository.Add(session);
-            bool result = dbContext.SaveChanges() > 0;
+            doctorRepository.Add(doctor);
+            patientRepository.Add(patient);
+            sessionrepository.Add(session);
+            bool result = dbContext.SaveChanges() > 2;
             Assert.IsTrue(result);
             Transaction.Current.Rollback();
         }
@@ -55,8 +59,8 @@ namespace HApp.Repository.Test
         [TestMethod]
         public void FindByPIDTest()
         {
-            repository.Add(session);
-            IList<Session> result = repository.FindByPatientID(patient.ID);
+            sessionrepository.Add(session);
+            IList<Session> result = sessionrepository.FindByPatientID(patient.ID);
             Assert.IsTrue(result.Count == 1 && result.Contains(session) && result[0].PID == patient.ID);
             Transaction.Current.Rollback();
         }
@@ -64,8 +68,8 @@ namespace HApp.Repository.Test
         [TestMethod]
         public void FindByDIDTest()
         {
-            repository.Add(session);
-            IList<Session> result = repository.FindByPatientID(doctor.ID);
+            sessionrepository.Add(session);
+            IList<Session> result = sessionrepository.FindByPatientID(doctor.ID);
             Assert.IsTrue(result.Count == 1 && result.Contains(session) && result[0].DID == doctor.ID);
             Transaction.Current.Rollback();
         }
@@ -73,9 +77,9 @@ namespace HApp.Repository.Test
         [TestMethod]
         public void RemoveTest()
         {
-            repository.Add(session);
+            sessionrepository.Add(session);
             bool result = dbContext.SaveChanges() > 0;
-            repository.Remove(session);
+            sessionrepository.Remove(session);
             result = dbContext.SaveChanges() > 0;
             Assert.IsTrue(result);
             Transaction.Current.Rollback();

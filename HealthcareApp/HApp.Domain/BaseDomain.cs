@@ -10,7 +10,8 @@ namespace HApp.Domain
         /// <summary>
         /// 私钥
         /// </summary>
-        public string privateKey;
+        public string privateKey
+        { get; set; }
 
         public BaseDomain()
         {

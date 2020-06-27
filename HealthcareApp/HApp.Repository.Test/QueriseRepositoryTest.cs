@@ -15,7 +15,7 @@ namespace HApp.Repository.Test
         private QueriseRepository repository;
         private Querise querise;
         private string sessionKey = "S@12345678";
-        private Guid Id = new Guid("32cc3858-b1f0-48b2-ace4-dca10a197964");
+        private Guid Id = new Guid("32cc3858-b1f0-48b2-ace4-dca10a197968");
 
         [TestInitialize]
         public void TestInitialize()
